@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6efe5"><title>Un jardín para ti</title><style>:root{--paper:#fcf8f1;--ink:#51353e;--rose:#a94d64;--muted:#8b7277;--gold:#b3955b;--line:#dfcdbd}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:25px}body{margin:0;background:#f6efe5;color:var(--ink);font:16px/1.7 Georgia,'Times New Roman',serif;isolation:isolate;min-height:100vh;background-image:radial-gradient(ellipse at 50% 24%,#fffaf2 0%,#fcf6ec88 39%,transparent 72%),radial-gradient(ellipse at 0% 58%,#e3c6ca66,transparent 55%),radial-gradient(ellipse at 100% 85%,#dadbc466,transparent 55%)}body:before{content:'';position:fixed;inset:12px;border:1px solid #bd9e7440;pointer-events:none;z-index:5}body:after{content:'';position:fixed;inset:19px;border:1px solid #bd9e7425;pointer-events:none;z-index:5}.flower-definitions{position:absolute;width:0;height:0;overflow:hidden}.garden-edges{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}.bouquet{position:absolute;width:clamp(180px,20vw,300px);height:auto;bottom:-65px;opacity:.7;filter:drop-shadow(0 7px 8px #aa866619)}.bouquet-left{left:-120px;transform:rotate(12deg);transform-origin:50% 100%}.bouquet-right{right:-120px;transform:scaleX(-1) rotate(8deg);transform-origin:50% 100%}.corner-sprig{position:absolute;width:200px;top:-205px;right:-20px;transform:rotate(185deg);opacity:.45}header{width:min(1120px,100%);margin:auto;padding:37px 45px 18px;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-size:20px;text-decoration:none;color:var(--rose);font-style:italic;line-height:1.3}.brand span{display:block;font:9px/2.4 system-ui,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#9e8581}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer;font:13px/1.4 system-ui,sans-serif;transition:transform .2s,background .2s}button:hover{transform:translateY(-2px)}button:focus-visible,a:focus-visible{outline:3px solid #a94d64;outline-offset:5px}.quiet{background:#fffaf17d;border:1px solid #d7c5b4;border-radius:30px;padding:10px 15px;color:#8b7476;font-size:11px}.eyebrow{font:10px/1.8 system-ui,sans-serif;letter-spacing:2.8px;color:#9e6e71}.intro{grid-area:intro;align-self:center;padding:20px 0 30px 12px;position:relative;z-index:1}main{width:min(1040px,calc(100% - 130px));margin:5px auto 0;display:grid;grid-template-columns:1.1fr 1fr;grid-template-areas:'intro scene' 'letter letter' 'footer footer';column-gap:12px}h1{font-size:clamp(36px,4.4vw,57px);line-height:1.14;font-weight:400;letter-spacing:-1.8px;margin:24px 0}h1 em{font-weight:400;color:var(--rose);font-size:.87em;line-height:1.25;display:inline-block;margin-top:5px}.gold-line{height:1px;background:#b3935e;width:57px;margin:26px 0}.intro-copy{font-size:16px;line-height:1.9;color:#8a6e73}.intro-copy strong{font-weight:400;color:#a04b61;font-style:italic;overflow-wrap:anywhere}.letter-link{display:inline-block;margin-top:15px;font:12px/1.6 system-ui,sans-serif;text-decoration:none;border-bottom:1px solid #bd9c87;color:#8e5b62;padding-bottom:5px}.letter-link span{margin-left:12px;font-size:19px}.cover{grid-area:scene;position:relative;text-align:center;padding:0 0 20px;align-self:center;min-width:0}.scene-arch{position:absolute;inset:25px 5px 93px;border-radius:240px 240px 130px 130px;border:1px solid #d9bbae80;background:radial-gradient(ellipse at 65% 45%,#fce1db77,transparent 65%),linear-gradient(180deg,#e9d9cb33,#f6e9d833);z-index:-1}.scene-arch:before{content:'';position:absolute;inset:9px;border:1px solid #d9bbae66;border-radius:inherit}.love-scene{display:block;width:100%;height:auto;max-height:490px;overflow:hidden}.scene-caption{font-size:14px;color:#927377;line-height:1.6;margin:-3px 5px 16px}.scene-caption em{color:#a55266}.love-button{border:1px solid #b88788;background:#fbf2e8;color:#9d5365;border-radius:40px;padding:13px 22px;box-shadow:0 4px 12px #9e69720b}.love-button span{font-size:18px;margin-left:8px;vertical-align:middle}.love-status{font-size:12px;color:#a55c6e;min-height:20px;margin:9px 0 0;line-height:1.5}.spider-swing{transform-box:view-box;transform-origin:115px 0;animation:spiderSway 6s ease-in-out infinite}.kitty-kiss{transform-box:view-box;transform-origin:285px 440px;animation:kittyLean 6s ease-in-out infinite}.kitty-bow{transform-box:view-box;transform-origin:272px 251px;animation:ribbonBreeze 3s ease-in-out infinite}.wind-lines{animation:windBreeze 5s ease-in-out infinite}.tiny-stars{animation:twinkle 4s ease-in-out infinite}.cover.kiss-again .kitty-kiss{animation:extraLean 1.5s ease-in-out}.card{grid-area:letter;position:relative;margin:25px auto 0;width:min(660px,100%);text-align:center;padding:42px 55px 45px;background:var(--paper);border:1px solid #e0cebd;box-shadow:0 18px 55px #7e5c4110;scroll-margin-top:25px}.card:before{content:'';position:absolute;inset:9px;border:1px solid #e4d6c75e;pointer-events:none}.letter-flower{width:66px;height:62px;margin:-8px auto 6px}.letter-flower svg{width:100%;height:100%}h2{font-size:30px;font-weight:400;line-height:1.3;margin:16px 0 12px}.card-intro{font-size:14px;color:#987c7e;margin-bottom:24px}.primary{background:var(--rose);color:#fff8f0;border:1px solid var(--rose);border-radius:3px;padding:13px 28px;box-shadow:0 5px 16px #9f4f6220}#letter{animation:letterReveal .7s ease both;margin-top:32px}#letter-text{white-space:pre-wrap;text-align:left;font-size:17px;line-height:2;overflow-wrap:anywhere}.signature{font-size:20px;color:var(--rose);font-style:italic;overflow-wrap:anywhere;margin:25px 0 6px}.letter-divider{color:#b69b73;margin:25px 0 16px}.phrase{font-size:21px;line-height:1.65;color:#855160;min-height:74px;margin:10px 0 24px}.text-button{border:0;background:transparent;color:#9e6571;border-bottom:1px solid #d3b7b6;padding:3px 0 7px;font-size:12px}footer{grid-area:footer;text-align:center;padding:35px 0 48px;color:#987e7d;font-size:14px;line-height:1.8}footer em{color:#a05b6b}.footer-line{display:block;width:34px;height:1px;background:#bca282;margin:21px auto 0}#particles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:4}.falling{position:absolute;left:var(--x);top:-40px;animation:petalFall var(--duration) linear both;animation-delay:var(--delay,0s);will-change:transform,opacity}.petal{width:var(--size);height:calc(var(--size)*1.4);background:linear-gradient(135deg,#f6d5d5,var(--color));border-radius:85% 12% 80% 25%;box-shadow:inset 1px 1px 2px #fff8;opacity:.7}.petal.lily-petal{border-radius:100% 0 100% 0;transform:rotate(20deg)}.petal.sun-petal{border-radius:100% 10% 100% 10%;background:linear-gradient(120deg,#ffe3a1,#dbab50)}.floating-heart{color:#c75d79;font-size:var(--size);font-family:Georgia,serif;line-height:1;opacity:.7}.paused .love-scene *, .paused .falling{animation-play-state:paused!important}
+@keyframes petalFall{0%{opacity:0;transform:translate3d(0,-30px,0) rotate(0)}8%{opacity:.7}50%{transform:translate3d(var(--drift-mid),52vh,0) rotate(170deg)}88%{opacity:.65}100%{opacity:0;transform:translate3d(var(--drift),calc(100vh + 90px),0) rotate(var(--spin))}}
+@keyframes spiderSway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(1.5deg)}}@keyframes kittyLean{0%,100%{transform:rotate(0)}45%,65%{transform:rotate(-2.5deg)}}@keyframes ribbonBreeze{50%{transform:rotate(3deg)}}@keyframes windBreeze{0%,100%{opacity:.15;transform:translateX(-7px)}50%{opacity:.5;transform:translateX(8px)}}@keyframes twinkle{50%{opacity:.4}}@keyframes extraLean{50%{transform:rotate(-5deg)}}@keyframes letterReveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:1500px){.bouquet-left{left:-60px}.bouquet-right{right:-60px}}
+@media(max-width:800px){header{padding:30px 33px 15px}main{width:calc(100% - 90px);grid-template-columns:1fr;grid-template-areas:'intro' 'scene' 'letter' 'footer';max-width:600px}.intro{text-align:center;padding:25px 0 5px}h1{font-size:43px;letter-spacing:-1.4px;margin:16px 0}.intro .gold-line{margin:20px auto}.intro-copy{font-size:15px}.intro .letter-link{margin-top:8px}.cover{width:100%;max-width:400px;margin:4px auto 0}.love-scene{max-height:440px}.bouquet{width:205px;bottom:-55px;opacity:.62}.bouquet-left{left:-125px}.bouquet-right{right:-125px}.corner-sprig{width:150px;top:-180px;right:-25px;opacity:.35}.card{padding:30px 30px 35px;margin-top:20px}h2{font-size:26px}#letter-text{font-size:16px}.phrase{font-size:19px}.eyebrow{font-size:9px;letter-spacing:2px}}
+@media(max-width:400px){header{padding:26px 26px 12px}.brand{font-size:18px}.brand span{font-size:8px;letter-spacing:2px}.quiet{padding:9px;font-size:10px}main{width:calc(100% - 56px)}h1{font-size:35px}.card{padding:26px 22px 30px}h2{font-size:24px}.scene-caption{font-size:13px}.scene-arch{inset:25px 5px 105px}.love-button{padding:12px 17px;font-size:12px}.bouquet{opacity:.48}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}#particles{display:none}}
+
+
+/* V6: paisaje SVG dibujado a mano y seis amigos de Sanrio. */
+body{background:#faf6ec;background-image:none}
+.world-definitions{position:absolute;width:0;height:0;overflow:hidden}
+.sanrio-world{position:fixed;inset:0;z-index:-3;pointer-events:none;background:#faf6ec}
+.sanrio-world>svg{display:block;width:100%;height:100%}
+.sanrio-world>.world-phone{display:none}
+.world-cloud{animation:cloudSway 12s ease-in-out infinite}
+.world-friend{animation:friendSway 6s ease-in-out infinite}
+.intro{padding:30px 20px;background:radial-gradient(ellipse,#fffaf3f5 35%,#fffaf3c7 70%,#fffaf100 91%);border-radius:35px}
+.scene-arch{background:#fffaf1ed;border-color:#d4bca4;box-shadow:0 12px 40px #96766b0a}
+.brand{padding:8px 15px;background:#fffaf1ef;border:1px solid #d8c5b0;border-radius:16px}
+.quiet{background:#fffaf1f5}
+.bouquet{opacity:1!important;filter:drop-shadow(0 2px 0 #fffaf2) drop-shadow(0 0 7px #fffaf2);width:clamp(205px,19vw,290px);bottom:-40px}
+.bouquet-left{left:-65px}.bouquet-right{right:-65px}
+.corner-sprig{opacity:.78}
+.kitty-bow{transform-box:fill-box;transform-origin:50% 50%;animation:none}
+.kiss-heart{opacity:0;animation:kissLift 6s ease-in-out infinite}
+.cover.kiss-again .kiss-heart{animation:kissLiftOnce 1.5s ease-out both}
+.paused .world-cloud,.paused .world-friend,.paused .kiss-heart{animation-play-state:paused!important}
+footer p{display:inline-block;background:#fffaf1ed;padding:12px 24px;border-radius:20px;margin:0}
+@keyframes cloudSway{0%,100%{transform:translateX(-7px)}50%{transform:translateX(7px)}}
+@keyframes friendSway{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes kissLift{0%,35%{opacity:0;transform:translate(0,0)}43%{opacity:1;transform:translate(0,-8px)}72%{opacity:.9;transform:translate(-36px,-75px)}90%,100%{opacity:0;transform:translate(-60px,-120px)}}
+@keyframes kissLiftOnce{0%,20%{opacity:0;transform:translate(0,0)}35%{opacity:1;transform:translate(0,-8px)}75%{opacity:.9;transform:translate(-36px,-75px)}100%{opacity:0;transform:translate(-60px,-120px)}}
+@media(min-width:1500px){.bouquet-left{left:-30px}.bouquet-right{right:-30px}}
+@media(max-width:800px){.sanrio-world>.world-wide{display:none}.sanrio-world>.world-phone{display:block}.intro{padding:24px 12px 18px}.bouquet{width:195px;bottom:-25px}.bouquet-left{left:-115px}.bouquet-right{right:-115px}.corner-sprig{opacity:.6}.scene-arch{background:#fffaf1f0}.brand{padding:7px 10px}}
+@media(max-width:400px){.bouquet{width:180px}.bouquet-left{left:-115px}.bouquet-right{right:-115px}}
+@media(prefers-reduced-motion:reduce){.world-cloud,.world-friend,.kiss-heart{animation:none!important}.kiss-heart{opacity:.85}}
+
+/* V7: compañeros con volumen, mirada, gestos y espacio propio. */
+.friends-garden{position:fixed;inset:116px 0 46px;z-index:2;pointer-events:none}
+.friend{position:absolute;top:calc(var(--slot)*33.333%);width:clamp(132px,10vw,182px);height:31%;padding:0;border:0;background:transparent;color:#805c70;pointer-events:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:filter .2s;--look-x:0px;--look-y:0px}
+.friend-left{left:clamp(22px,calc((100vw - 1040px)/4 - 68px),180px)}
+.friend-right{right:clamp(22px,calc((100vw - 1040px)/4 - 68px),180px)}
+.friend:hover{transform:none;filter:drop-shadow(0 3px 7px #a8789822)}
+.friend-portrait{width:100%;height:calc(100% - 22px);max-height:220px;overflow:visible;filter:drop-shadow(0 2px 0 #fff8);animation:buddyBounce 5.2s ease-in-out infinite;animation-delay:var(--phase)}
+.friend-name{display:block;flex-shrink:0;font:11px/1.5 Georgia,serif;font-style:italic;color:#8e5d72;background:#fffaf1eb;border:1px solid #e7d8c766;padding:2px 12px;border-radius:15px}
+.buddy-head{transform-box:fill-box;transform-origin:50% 90%;animation:buddyNod 6.5s ease-in-out infinite;animation-delay:var(--phase,0s)}
+.buddy-eyes{transform-box:fill-box;transform-origin:50% 50%;animation:buddyBlink 5s infinite;animation-delay:var(--phase,0s)}
+.buddy-pupils{transform:translate(var(--look-x,0px),var(--look-y,0px));transition:transform .2s ease}
+.buddy-hand{transform-box:fill-box;transform-origin:10% 90%;animation:buddyWave 6s ease-in-out infinite;animation-delay:var(--phase,0s)}
+.buddy-ear{transform-box:fill-box;transform-origin:85% 95%;animation:buddyEar 5.2s ease-in-out infinite;animation-delay:var(--phase,0s)}
+.buddy-ear.ear-right{transform-origin:15% 95%;animation-direction:reverse}
+.buddy-tail,.buddy-hat{transform-box:fill-box;transform-origin:30% 80%;animation:buddyTail 4.5s ease-in-out infinite;animation-delay:var(--phase,0s)}
+.friend.is-greeting .buddy-hand{animation:buddyHello .35s ease-in-out 4}
+.friend.is-greeting .friend-portrait{animation:buddyHop .65s ease-in-out 2}
+.paused .friend-portrait,.paused .buddy-head,.paused .buddy-eyes,.paused .buddy-hand,.paused .buddy-ear,.paused .buddy-tail,.paused .buddy-hat{animation-play-state:paused!important}
+@keyframes buddyBounce{0%,100%{transform:translateY(0)}45%{transform:translateY(-9px)}65%{transform:translateY(-5px)}}
+@keyframes buddyNod{0%,100%{transform:rotate(-2deg)}45%{transform:rotate(2deg)}70%{transform:rotate(0)}}
+@keyframes buddyBlink{0%,39%,43%,74%,78%,100%{transform:scaleY(1)}41%,76%{transform:scaleY(.07)}}
+@keyframes buddyWave{0%,14%,39%,100%{transform:rotate(0)}20%,32%{transform:rotate(-20deg)}26%{transform:rotate(5deg)}}
+@keyframes buddyEar{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(5deg)}}
+@keyframes buddyTail{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(6deg)}}
+@keyframes buddyHello{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(-27deg)}}
+@keyframes buddyHop{0%,100%{transform:translateY(0)}45%{transform:translateY(-16px)}}
+@media(max-width:1320px){main{grid-template-areas:'intro scene' 'friends friends' 'letter letter' 'footer footer'}.friends-garden{grid-area:friends;position:relative;inset:auto;z-index:1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;padding:20px 10px 10px;margin:15px auto 5px;width:100%;border-radius:50px;background:linear-gradient(180deg,#fffaf100,#fffaf1e0 38%,#e7eddde8);pointer-events:auto}.friend{position:relative;inset:auto;width:100%;height:190px}.friend-portrait{height:160px}.friend-name{font-size:10px;padding:2px 7px}}
+@media(max-width:800px){main{grid-template-areas:'intro' 'scene' 'friends' 'letter' 'footer'}.friends-garden{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:5px;row-gap:18px;padding:25px 8px;margin:12px auto 5px;border:1px solid #dce3d3a8}.friend{height:190px}.friend-portrait{height:164px;max-height:none}.friend-name{font-size:10px}}
+@media(max-width:400px){.friends-garden{padding:22px 5px;gap:12px 3px}.friend{height:170px}.friend-portrait{height:145px}.friend-name{padding:2px 5px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){.friend-portrait,.buddy-head,.buddy-eyes,.buddy-hand,.buddy-ear,.buddy-tail,.buddy-hat{animation:none!important}.buddy-pupils{transition:none!important}}
+</style></head>
+<body>
+<svg class="world-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<linearGradient id="world-sky" x2="0" y2="1"><stop stop-color="#e9f3fa"/><stop offset=".6" stop-color="#fff7e9"/><stop offset="1" stop-color="#e5eddc"/></linearGradient>
+<g id="w-cloud" fill="#fffdf8" stroke="#dbcdd0" stroke-width="2"><path d="M-80 14Q-99-17-63-26-52-62-18-39 8-71 36-35 78-47 84-13 115 9 83 25H-65Q-78 25-80 14Z"/></g>
+<linearGradient id="buddy-white" x2=".4" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#f8eee7"/></linearGradient><linearGradient id="buddy-pink" x2=".5" y2="1"><stop stop-color="#f4b1c8"/><stop offset="1" stop-color="#df719e"/></linearGradient><linearGradient id="buddy-dark" x2=".5" y2="1"><stop stop-color="#74627d"/><stop offset="1" stop-color="#41374d"/></linearGradient><linearGradient id="buddy-gold" x2=".4" y2="1"><stop stop-color="#fff0ae"/><stop offset="1" stop-color="#f3cb67"/></linearGradient><linearGradient id="buddy-green" x2=".5" y2="1"><stop stop-color="#c5e891"/><stop offset="1" stop-color="#8fbd5f"/></linearGradient><linearGradient id="buddy-red" x2=".4" y2="1"><stop stop-color="#ed9aab"/><stop offset="1" stop-color="#ca647e"/></linearGradient><g id="w-house" stroke="#ba8895" stroke-width="3"><path d="M-58 7v94H58V7Z" fill="#f6e3d8"/><path d="M-72 12Q0-77 72 12Z" fill="#dfa3b2"/><path d="M-15 101V62q15-22 30 0v39" fill="#c6dbd5"/><rect x="-45" y="34" width="20" height="26" rx="10" fill="#fff3c4"/><rect x="25" y="34" width="20" height="26" rx="10" fill="#fff3c4"/><path d="M-34 34v26M35 34v26" stroke-width="2"/><g fill="#d986a3"><path d="M-4-22q-35-31-36-1 1 25 35 11M4-22q35-31 36-1-1 25-35 11"/><circle cy="-20" r="10"/></g></g>
+<g id="w-castle" stroke="#a799bf" stroke-width="3"><path d="M-65 125V5h32v120M33 125V5h32v120M-33 125V36h66v89" fill="#e2d9ed"/><path d="m-74 5 25-55 25 55M24 5l25-55L74 5M-44 36 0-26l44 62" fill="#c8b6dd"/><path d="M-12 125V83q12-24 24 0v42" fill="#fff0cf"/><path d="M-55 35h12v20h-12M43 35h12v20H43" fill="#fff0cf"/><path d="m0-48 5 12 13 1-10 8 3 13-11-7-11 7 3-13-10-8 13-1Z" fill="#efd58a" stroke="#ccaf69" stroke-width="2"/></g>
+<g id="w-tree"><path d="M0 0v110" stroke="#b49c87" stroke-width="8"/><path d="M0 60-25 25M0 42l25-30" stroke="#b49c87" stroke-width="5"/><g fill="#e8bcc7" stroke="#d79fae" stroke-width="2"><circle cx="-25" cy="10" r="28"/><circle cx="25" cy="5" r="29"/><circle cy="-10" r="30"/><circle cy="23" r="32"/></g><g fill="#f7dae0"><circle cx="-25" cy="-2" r="6"/><circle cx="16" cy="-16" r="6"/><circle cx="2" cy="30" r="6"/></g></g>
+</defs></svg><div class="sanrio-world" aria-hidden="true"><svg class="world-wide" viewBox="0 0 1440 960" preserveAspectRatio="xMidYMid slice"><path fill="url(#world-sky)" d="M0 0h1440v960H0Z"/><g fill="none" stroke-width="10" opacity=".45"><path d="M1030 130q135-150 270 0" stroke="#e6a7b7"/><path d="M1041 137q124-137 248 0" stroke="#edca86"/><path d="M1052 144q113-124 226 0" stroke="#b7d0c6"/></g><g transform="translate(120 100) scale(1)"><g class="world-cloud" style="animation-delay:0s"><use href="#w-cloud"/></g></g><g transform="translate(500 66) scale(0.7)"><g class="world-cloud" style="animation-delay:-4s"><use href="#w-cloud"/></g></g><g transform="translate(920 90) scale(0.8)"><g class="world-cloud" style="animation-delay:-8s"><use href="#w-cloud"/></g></g><g transform="translate(1310 170) scale(1)"><g class="world-cloud" style="animation-delay:-2s"><use href="#w-cloud"/></g></g><path d="M0 555Q130 360 320 595t400 52q200-300 410-90t310-30v433H0Z" fill="#dee9d7"/><path d="M0 706q160-180 380 18t350 24q340-225 710-30v242H0Z" fill="#ceddc4"/><path d="M0 820q240-75 450 32t410 20q350-95 580-20v108H0Z" fill="#e4ecd9"/><path d="M600 960q10-100 115-170 60-45-12-123 104 57 50 120-85 95-30 173" fill="#fcf5df"/><use href="#w-house" transform="translate(85 680) scale(1.05)"/><use href="#w-house" transform="translate(235 520) scale(0.62)"/><use href="#w-castle" transform="translate(1310 400) scale(1)"/><use href="#w-tree" transform="translate(30 345) scale(1)"/><use href="#w-tree" transform="translate(1410 600) scale(1.1)"/><use href="#w-tree" transform="translate(1150 620) scale(0.65)"/></svg><svg class="world-phone" viewBox="0 0 480 960" preserveAspectRatio="none"><path d="M0 0h480v960H0Z" fill="url(#world-sky)"/><g fill="none" stroke-width="6" opacity=".5"><path d="M300 100q70-90 140 0" stroke="#e6a7b7"/><path d="M307 105q63-80 126 0" stroke="#edca86"/><path d="M314 110q56-70 112 0" stroke="#b7d0c6"/></g><g transform="translate(55 80) scale(0.55)"><g class="world-cloud" style="animation-delay:0s"><use href="#w-cloud"/></g></g><g transform="translate(240 35) scale(0.45)"><g class="world-cloud" style="animation-delay:-4s"><use href="#w-cloud"/></g></g><g transform="translate(435 140) scale(0.5)"><g class="world-cloud" style="animation-delay:-8s"><use href="#w-cloud"/></g></g><path d="M0 530q80-140 150 90t170-40q100-130 160-10v390H0Z" fill="#dfe9d8"/><path d="M0 760q90-100 180 55t140-10q90-100 160-35v190H0Z" fill="#d0dec6"/><path d="M185 960q-10-105 45-155 60-45-10-100 75 45 45 105-40 70-6 150" fill="#fff3db"/><use href="#w-house" transform="translate(25 680) scale(0.58)"/><use href="#w-castle" transform="translate(451 445) scale(0.6)"/><use href="#w-tree" transform="translate(4 390) scale(0.7)"/><use href="#w-tree" transform="translate(480 695) scale(0.7)"/></svg></div>
+<svg class="flower-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<g id="leaf"><path d="M0 0Q-25-45-54-35-40 2 0 0ZM0 0Q12-40 40-46 45-12 0 0Z" fill="#668b63"/><path d="m-2-1-37-26M0 0l31-35" stroke="#536e54" stroke-width="1.3" fill="none"/></g>
+<g id="rose"><path d="M-5 29Q-44 22-32-7-40-33-15-34 3-52 22-30 49-24 34 3 37 34 8 35Z" fill="currentColor"/><path d="M-5 29Q-27 10-20-9 2-22 21-7 33 13 8 25-13 27-14 7-9-11 7-9 21 4 2 13-9 9-2 1M-15-34Q-23-20-20-9M22-30Q12-24 21-7M34 3 21-7M-32-7-20-9" stroke="#9b3f57" stroke-width="1.7" fill="none" opacity=".65"/></g>
+<g id="sunflower"><g fill="#efbb52" stroke="#cb8e38" stroke-width="1.1">
+<ellipse cy="-25" rx="9" ry="24"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(30)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(60)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(90)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(120)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(150)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(180)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(210)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(240)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(270)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(300)"/><ellipse cy="-25" rx="9" ry="24" transform="rotate(330)"/>
+</g><circle r="20" fill="#7b543c"/><circle r="14" fill="#936243" stroke="#c29560" stroke-width="2" stroke-dasharray="1 4"/><circle r="7" fill="#704731"/></g>
+<g id="lily"><g fill="currentColor" stroke="#965d7d" stroke-width="1.1"><path d="M0 9Q-19-21 0-62 22-24 0 9Z"/><path d="M0 9Q-40-2-52-39-9-43 0 9Z"/><path d="M0 9Q13-40 53-40 42-3 0 9Z"/><path d="M0 9Q-38 38-56 10-26-9 0 9Z"/><path d="M0 9Q37-6 55 11 32 39 0 9Z"/><path d="M0 9Q24 30 0 53-18 32 0 9Z"/></g><g stroke="#b78b4d" stroke-width="1.8"><path d="m0 10-9-29M0 10l9-29M0 10v-36"/></g><g fill="#a46f32"><ellipse cx="-9" cy="-20" rx="3" ry="5" transform="rotate(-20 -9 -20)"/><ellipse cx="9" cy="-20" rx="3" ry="5"/><ellipse cy="-27" rx="3" ry="5"/></g><g fill="#bd6a80" opacity=".65"><circle cx="-9" cy="-4" r="1.4"/><circle cx="10" cy="-5" r="1.4"/><circle cx="-19" cy="8" r="1.4"/><circle cx="17" cy="8" r="1.4"/></g></g>
+</defs></svg>
+<div class="garden-edges" aria-hidden="true"><svg class="bouquet bouquet-left" viewBox="0 0 280 530"><g fill="none" stroke="#6d8968" stroke-width="3"><path d="M140 510Q123 351 67 240M140 510Q152 345 198 205M140 510Q193 385 235 330M140 510Q87 400 35 365M140 510Q120 220 119 112"/></g>
+<use href="#leaf" transform="translate(132 432) rotate(-25) scale(.8)"/><use href="#leaf" transform="translate(151 379) rotate(10) scale(.75)"/><use href="#leaf" transform="translate(109 325) rotate(-30) scale(.75)"/><use href="#leaf" transform="translate(123 240) rotate(5) scale(.65)"/><use href="#leaf" transform="translate(187 310) rotate(30) scale(.65)"/>
+<use href="#lily" transform="translate(65 240) rotate(-25) scale(.95)" style="color:#df8db2"/><use href="#lily" transform="translate(198 205) rotate(20) scale(.8)" style="color:#bd99d6"/>
+<use href="#sunflower" transform="translate(120 120) rotate(12) scale(.83)"/><use href="#sunflower" transform="translate(232 333) rotate(30) scale(.67)"/>
+<use href="#rose" transform="translate(34 366) rotate(-16) scale(.9)" style="color:#d46e92"/><use href="#rose" transform="translate(137 349) rotate(25) scale(.72)" style="color:#ef9db6"/><use href="#lily" transform="translate(107 460) rotate(-17) scale(.65)" style="color:#f2bd87"/></svg><svg class="bouquet bouquet-right" viewBox="0 0 280 530"><g fill="none" stroke="#6d8968" stroke-width="3"><path d="M140 510Q123 351 67 240M140 510Q152 345 198 205M140 510Q193 385 235 330M140 510Q87 400 35 365M140 510Q120 220 119 112"/></g>
+<use href="#leaf" transform="translate(132 432) rotate(-25) scale(.8)"/><use href="#leaf" transform="translate(151 379) rotate(10) scale(.75)"/><use href="#leaf" transform="translate(109 325) rotate(-30) scale(.75)"/><use href="#leaf" transform="translate(123 240) rotate(5) scale(.65)"/><use href="#leaf" transform="translate(187 310) rotate(30) scale(.65)"/>
+<use href="#lily" transform="translate(65 240) rotate(-25) scale(.95)" style="color:#df8db2"/><use href="#lily" transform="translate(198 205) rotate(20) scale(.8)" style="color:#bd99d6"/>
+<use href="#sunflower" transform="translate(120 120) rotate(12) scale(.83)"/><use href="#sunflower" transform="translate(232 333) rotate(30) scale(.67)"/>
+<use href="#rose" transform="translate(34 366) rotate(-16) scale(.9)" style="color:#d46e92"/><use href="#rose" transform="translate(137 349) rotate(25) scale(.72)" style="color:#ef9db6"/><use href="#lily" transform="translate(107 460) rotate(-17) scale(.65)" style="color:#f2bd87"/></svg><svg class="corner-sprig" viewBox="0 0 280 530"><g fill="none" stroke="#6d8968" stroke-width="3"><path d="M140 510Q123 351 67 240M140 510Q152 345 198 205M140 510Q193 385 235 330M140 510Q87 400 35 365M140 510Q120 220 119 112"/></g>
+<use href="#leaf" transform="translate(132 432) rotate(-25) scale(.8)"/><use href="#leaf" transform="translate(151 379) rotate(10) scale(.75)"/><use href="#leaf" transform="translate(109 325) rotate(-30) scale(.75)"/><use href="#leaf" transform="translate(123 240) rotate(5) scale(.65)"/><use href="#leaf" transform="translate(187 310) rotate(30) scale(.65)"/>
+<use href="#lily" transform="translate(65 240) rotate(-25) scale(.95)" style="color:#df8db2"/><use href="#lily" transform="translate(198 205) rotate(20) scale(.8)" style="color:#bd99d6"/>
+<use href="#sunflower" transform="translate(120 120) rotate(12) scale(.83)"/><use href="#sunflower" transform="translate(232 333) rotate(30) scale(.67)"/>
+<use href="#rose" transform="translate(34 366) rotate(-16) scale(.9)" style="color:#d46e92"/><use href="#rose" transform="translate(137 349) rotate(25) scale(.72)" style="color:#ef9db6"/><use href="#lily" transform="translate(107 460) rotate(-17) scale(.65)" style="color:#f2bd87"/></svg></div>
+<div id="particles" aria-hidden="true"></div>
+<header><a class="brand" href="#inicio">Una cosita para ti<span>con todo mi cariño</span></a><button id="motion" class="quiet" type="button" aria-pressed="false" aria-label="Pausar las animaciones">Pausar el viento</button></header>
+<main id="inicio">
+<section class="intro"><p class="eyebrow">SI HOY PUDIERA REGALARTE ALGO…</p><h1>Sería un jardín.<br>Y un beso.<br><em>Y otro ratito contigo.</em></h1><div class="gold-line" aria-hidden="true"></div><p class="intro-copy">Para <strong id="recipient"></strong>,<br>porque hay personas que hacen florecer<br>hasta los días más normales.</p><a class="letter-link" href="#carta">Te dejé algo escrito <span aria-hidden="true">↘</span></a></section>
+<section class="cover" aria-label="Una pequeña historia de Kitty y Spider-Man"><div class="scene-arch" aria-hidden="true"></div><svg class="love-scene" viewBox="95 0 430 490" role="img" aria-labelledby="scene-title scene-desc">
+<title id="scene-title">Un beso que llega hasta tu mundo</title><desc id="scene-desc">Spider-Man cuelga boca abajo de una telaraña. Kitty se acerca para darle un beso. Una brisa mueve sus figuras y lleva corazones entre ellos.</desc>
+<defs>
+ <pattern id="web-pattern" width="28" height="30" patternUnits="userSpaceOnUse"><path d="M14 0V30M0 15Q14 4 28 15M0 30Q14 19 28 30" fill="none" stroke="#651e36" stroke-width="1" opacity=".4"/></pattern>
+ <linearGradient id="suit-red" x2="1" y2="1"><stop stop-color="#ed5365"/><stop offset="1" stop-color="#be284b"/></linearGradient>
+ <linearGradient id="dress-pink" x2="0" y2="1"><stop stop-color="#fa7fa6"/><stop offset="1" stop-color="#dd487b"/></linearGradient>
+ <radialGradient id="scene-glow"><stop stop-color="#ffe2ec" stop-opacity=".9"/><stop offset="1" stop-color="#ffe2ec" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="305" cy="286" rx="280" ry="200" fill="url(#scene-glow)"/>
+<g class="wind-lines" fill="none" stroke="#dba8bf" stroke-width="2" stroke-linecap="round"><path d="M44 215q35 -15 61 0t45 0"/><path d="M450 175q35 -15 61 0t35 -4"/><path d="M452 382q28 -12 55 0"/></g>
+<g class="tiny-stars" fill="#dca262"><path d="m95 300 4 11 11 4-11 4-4 11-4-11-11-4 11-4Z"/><path d="m468 259 3 8 8 3-8 3-3 8-3-8-8-3 8-3Z"/><circle cx="136" cy="119" r="3"/><circle cx="418" cy="100" r="3"/></g>
+<ellipse cx="381" cy="455" rx="72" ry="9" fill="#dca6bb" opacity=".18"/>
+<g class="spider-swing" stroke="#442a43" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M210 -15V132" stroke="#ac8da9" stroke-width="3"/><path d="M207 10q15 23 0 46t0 44" fill="none" stroke="#d4bdce" stroke-width="1.5"/>
+ <!-- Piernas dobladas y botas, torso y brazos de Spider-Man boca abajo. -->
+ <path d="M194 225Q137 218 148 169l21-43q8-17 24-8l-8 56 30 15" fill="#316c9e"/>
+ <path d="M226 225q57-15 44-60l-26-40q-10-17-22-5l10 56-24 14" fill="#316c9e"/>
+ <path d="m170 132 3-31q3-18 18-10l21 32-25 36Z" fill="url(#suit-red)"/><path d="m245 133-8-34q-4-17-17-6l-17 33 26 32Z" fill="url(#suit-red)"/>
+ <path d="M190 160q21-12 40 0l19 71-26 26-41-18Z" fill="url(#suit-red)"/>
+ <path d="M190 160q21-12 40 0l19 71-26 26-41-18Z" fill="url(#web-pattern)" stroke="none"/>
+ <path d="M183 211q-21-11-19-38l30-43q12-11 18 2l-20 46 10 23" fill="url(#suit-red)"/>
+ <path d="M239 213q23-14 14-39l-30-43q-13-12-19 3l24 44-10 22" fill="url(#suit-red)"/>
+ <path d="m178 173 19 12m-24-2 20 13m37-19 20-7m-18 19 19-7" fill="none" stroke="#772e46" stroke-width="2"/>
+ <path d="M201 126q9-12 17 0l2 15-17 3Z" fill="#d83d5b"/>
+ <ellipse cx="224" cy="292" rx="70" ry="77" transform="rotate(-15 224 292)" fill="url(#suit-red)"/>
+ <ellipse cx="224" cy="292" rx="70" ry="77" transform="rotate(-15 224 292)" fill="url(#web-pattern)" stroke="none"/>
+ <path d="M174 268q26-32 45-22-1 37-25 52-14-6-20-30Z" fill="#fff9ff" stroke-width="7"/><path d="M233 240q26-2 46 27-2 20-14 27-26-15-32-54Z" fill="#fff9ff" stroke-width="7"/>
+ <path d="M190 337q26 12 49 3" fill="none" stroke="#a6274a" stroke-width="2"/>
+</g>
+<g class="kitty-kiss" stroke="#402b35" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round">
+<!-- Silueta redonda, orejas cortas y lazo clásico. -->
+<path d="m350 409-8 27q-1 16 21 10l18-18-4-19m12 0-1 29q3 14 22 2l12-21-16-11" fill="#fffefb"/>
+<path d="M350 343q31-13 60 2l23 71q-43 24-96 0Z" fill="#ce425b"/>
+<path d="m369 344-5 66q15 7 31 1l-9-67" fill="#fff8ef"/>
+<path d="M338 416q10 12 18 3 9 11 18 2 10 11 19 0 11 9 19-2 12 8 21-3" fill="#fff8ef"/>
+<path d="M405 353q24 12 12 32-10 12-23-1l-8-17" fill="#fffefb"/>
+<path d="M350 352q-22 7-20 22 1 13 15 4l16-13" fill="#fffefb"/>
+<!-- Cabeza de perfil: oreja corta integrada, sin dos picos separados. -->
+<path d="M300 301C299 275 317 254 343 247Q367 238 394 246Q408 227 419 226Q427 234 430 254C449 267 457 287 452 309C448 337 431 351 403 355C367 360 331 350 312 331Q299 318 300 301Z" fill="#fffefb"/>
+<path d="M320 291q8 8 17-1" fill="none" stroke-width="4.2"/>
+<ellipse cx="300" cy="307" rx="6.5" ry="4.5" fill="#f0c04d" stroke-width="2"/>
+<ellipse cx="337" cy="315" rx="11" ry="6" fill="#f2b4bd" opacity=".6" stroke="none"/>
+<path d="m349 287 25-5m-25 17 27 2m-27 11 24 8" fill="none" stroke-width="3.5"/>
+<g transform="rotate(-28 348 251)"><g class="kitty-bow" fill="#d63658" stroke="#673244" stroke-width="3.2">
+<path d="M343 242Q319 219 316 238Q312 262 339 260L349 251Z"/>
+<path d="M354 242Q380 220 382 241Q384 262 357 260L348 251Z"/>
+<circle cx="349" cy="250" r="10" fill="#ed7188"/>
+</g></g></g>
+<g class="kiss-heart" aria-hidden="true"><g transform="translate(300 290) scale(0.72) translate(-300 -290)"><path d="M300 304C282 291 279 276 290 274Q297 272 300 279Q303 272 310 274C321 276 318 291 300 304Z" fill="#dd4670" stroke="#aa3657" stroke-width="1.5"/></g></g>
+</svg><p class="scene-caption">De todos los lugares,<br><em>mi favorito es cerquita de ti.</em></p><button id="love-button" class="love-button" type="button">Un poquito más de amor <span aria-hidden="true">♡</span></button><p id="love-status" class="love-status" role="status"></p></section>
+<section class="friends-garden" aria-label="Los amigos del jardín"><button class="friend friend-left" type="button" data-friend="my" aria-label="Saludar a My Melody" style="--slot:0;--phase:0.0s"><svg class="friend-portrait" viewBox="-116 -145 232 300" aria-hidden="true"><g id="buddy-my-drawing" stroke="#9c5875" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cy="130" rx="42" ry="7" fill="#b498a3" opacity=".15" stroke="none"/>
+<path d="M-29 45q-20 25-10 57 11 18 39 14 28 4 39-14 10-32-10-57Z" fill="url(#buddy-white)"/>
+<ellipse cx="-22" cy="115" rx="22" ry="13" fill="url(#buddy-white)"/><ellipse cx="22" cy="115" rx="22" ry="13" fill="url(#buddy-white)"/>
+<path d="M-34 49q-23 12-19 31 4 9 16 4l10-20" fill="url(#buddy-white)"/>
+<g class="buddy-hand"><path d="M30 50q16 9 25-6 4-15 13-10 12 8 4 27-12 27-34 16" fill="url(#buddy-white)"/><path d="m60 42 5 4m-9 1 6 4" fill="none" stroke-width="1.5"/></g>
+<path d="M-32 42q33 17 64 0l6 19-30 6-8-12-8 12-30-6Z" fill="url(#buddy-pink)"/>
+<g class="buddy-head"><g class="buddy-ear"><path d="M-36-43q-27-15-32-47-3-23 10-26 20 0 32 67" fill="url(#buddy-pink)"/><path d="M-53-101q9 16 16 39" fill="none" stroke="#f8d3e0" stroke-width="5"/></g>
+<g class="buddy-ear ear-right"><path d="M12-48q-7-54 15-73 19-15 25 3 5 14-9 29L30-46" fill="url(#buddy-pink)"/><path d="M27-105q8-13 14-8" fill="none" stroke="#f8d3e0" stroke-width="5"/></g>
+<path d="M-56-17q-1-43 53-43 55-1 61 42 9 43-57 64-65-14-57-63Z" fill="url(#buddy-pink)"/>
+<ellipse cy="5" rx="46" ry="34" fill="#fffaf2" stroke="none"/>
+<path d="M-39-28q15-17 36-19" fill="none" stroke="#ffe3ec" stroke-width="4"/><g class="buddy-eyes" stroke="none"><g class="buddy-pupils"><ellipse cx="-20" cy="5" rx="4" ry="6" fill="#574348"/><ellipse cx="20" cy="5" rx="4" ry="6" fill="#574348"/><circle cx="-19" cy="3" r="1.4" fill="#fff"/><circle cx="21" cy="3" r="1.4" fill="#fff"/></g></g> <g fill="#efa9bb" opacity=".65" stroke="none"><ellipse cx="-34" cy="17" rx="10" ry="5"/><ellipse cx="34" cy="17" rx="10" ry="5"/></g>
+<ellipse cy="16" rx="6" ry="4" fill="#eec569" stroke="none"/><path d="M-4 24q4 4 8 0" fill="none" stroke-width="1.5"/>
+<g transform="translate(-42 -34)" fill="#fff5d7" stroke="#dbb26b" stroke-width="1.4"><ellipse cy="-7" rx="7" ry="11"/><ellipse cy="-7" rx="7" ry="11" transform="rotate(72)"/><ellipse cy="-7" rx="7" ry="11" transform="rotate(144)"/><ellipse cy="-7" rx="7" ry="11" transform="rotate(216)"/><ellipse cy="-7" rx="7" ry="11" transform="rotate(288)"/><circle r="6" fill="#f0ca73"/></g></g></g></svg><span class="friend-name">My Melody</span></button><button class="friend friend-left" type="button" data-friend="ku" aria-label="Saludar a Kuromi" style="--slot:1;--phase:-0.85s"><svg class="friend-portrait" viewBox="-116 -145 232 300" aria-hidden="true"><g id="buddy-ku-drawing" stroke="#514053" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cy="130" rx="42" ry="7" fill="#b498a3" opacity=".15" stroke="none"/>
+<path class="buddy-tail" d="M32 94q44 4 32-27l-10 1 8-19 17 11-10 3q24 40-34 45" fill="#796380"/>
+<path d="M-29 42q-22 29-10 63 39 15 78 0 12-34-10-63Z" fill="url(#buddy-dark)"/>
+<ellipse cx="-23" cy="116" rx="21" ry="12" fill="#66526f"/><ellipse cx="23" cy="116" rx="21" ry="12" fill="#66526f"/>
+<path d="M-28 51q-24 8-25 28-1 13 11 12 12-5 19-21" fill="#fff6ef"/>
+<g class="buddy-hand"><path d="M29 51q17 2 22-16 3-13 12-10 15 6 7 28-9 24-31 24" fill="#fff6ef"/><path d="m58 33 7 4m-11 1 7 4" stroke-width="1.5"/></g>
+<path d="m-30 39 14 15 16-10 16 10 14-15 8 17-19 11L0 58l-19 9-19-11Z" fill="#e6a0bb"/>
+<g class="buddy-head"><path d="M-54-13-66-80l40 25Q0-66 26-55l40-25-12 67q15 36-10 51-42 24-88 0-25-15-10-51Z" fill="url(#buddy-dark)"/>
+<g class="buddy-ear"><circle cx="-66" cy="-81" r="6" fill="#6d5877"/><circle cx="66" cy="-81" r="6" fill="#6d5877"/></g>
+<path d="M-43 9q4-29 24-17Q0 3 19-8q20-12 24 17 3 30-43 32-46-2-43-32Z" fill="#fff5ed" stroke="none"/>
+<path d="M-42-32q8-11 19-16" fill="none" stroke="#9e89ab" stroke-width="3" opacity=".65"/>
+<path d="M-19-26q-1-22 19-22t19 22l-10 8v6H-9v-6Z" fill="#f2b6ce" stroke="none"/><circle cx="-7" cy="-31" r="4" fill="#69516d" stroke="none"/><circle cx="7" cy="-31" r="4" fill="#69516d" stroke="none"/><path d="m-3-22 3-3 3 3" fill="#69516d" stroke="none"/>
+<g class="buddy-eyes" stroke="none"><g class="buddy-pupils"><ellipse cx="-19" cy="9" rx="4" ry="5" fill="#574348"/><ellipse cx="19" cy="9" rx="4" ry="5" fill="#574348"/><circle cx="-18" cy="7" r="1.4" fill="#fff"/><circle cx="20" cy="7" r="1.4" fill="#fff"/></g></g> <g fill="#efa9bb" opacity=".65" stroke="none"><ellipse cx="-30" cy="22" rx="10" ry="5"/><ellipse cx="30" cy="22" rx="10" ry="5"/></g><path d="m-30 4 4 2m48 0 5-3" stroke-width="2"/><path d="M-6 23q6 7 12 0" fill="none" stroke-width="1.7"/></g></g></svg><span class="friend-name">Kuromi</span></button><button class="friend friend-left" type="button" data-friend="poch" aria-label="Saludar a Pochacco" style="--slot:2;--phase:-1.7s"><svg class="friend-portrait" viewBox="-116 -145 232 300" aria-hidden="true"><g id="buddy-poch-drawing" stroke="#6d5861" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cy="130" rx="44" ry="7" fill="#b498a3" opacity=".15" stroke="none"/>
+<path d="M-29 42q-23 28-14 62 14 18 43 14 29 4 43-14 9-34-14-62Z" fill="url(#buddy-white)"/>
+<path d="M-32 43q32 12 64 0l11 42q-43 20-86 0Z" fill="url(#buddy-red)"/><path d="M-17 48q17 8 34 0" fill="none" stroke="#ffd1d9" stroke-width="3"/>
+<ellipse cx="-25" cy="117" rx="23" ry="13" fill="url(#buddy-white)"/><ellipse cx="25" cy="117" rx="23" ry="13" fill="url(#buddy-white)"/>
+<path d="M-35 50q-25 7-23 28 3 14 15 8l17-18" fill="url(#buddy-white)"/>
+<g class="buddy-hand"><path d="M34 51q20-1 24-20 4-13 13-7 13 10 2 30-10 20-31 23" fill="url(#buddy-white)"/><path d="m62 34 6 4" fill="none" stroke-width="1.5"/></g>
+<g class="buddy-head"><g class="buddy-ear"><path d="M-39-36q-38-10-36 26 0 41 21 38 19-4 25-46" fill="#4d4651"/><path d="M-61-14q-6 13-3 25" fill="none" stroke="#756775" stroke-width="3"/></g><g class="buddy-ear ear-right"><path d="M39-36q38-10 36 26 0 41-21 38-19-4-25-46" fill="#4d4651"/></g>
+<path d="M-49-12q-2-37 36-45l7-11 6 8 8-9 4 12q39 7 37 45 7 48-49 51-56-3-49-51Z" fill="url(#buddy-white)"/>
+<g class="buddy-eyes" stroke="none"><g class="buddy-pupils"><ellipse cx="-21" cy="1" rx="4" ry="6" fill="#574348"/><ellipse cx="21" cy="1" rx="4" ry="6" fill="#574348"/><circle cx="-20" cy="-1" r="1.4" fill="#fff"/><circle cx="22" cy="-1" r="1.4" fill="#fff"/></g></g> <g fill="#efa9bb" opacity=".65" stroke="none"><ellipse cx="-34" cy="15" rx="10" ry="5"/><ellipse cx="34" cy="15" rx="10" ry="5"/></g><ellipse cy="12" rx="6" ry="5" fill="#55444d" stroke="none"/><path d="M0 17v4m-5 1q5 5 10 0" fill="none" stroke-width="1.7"/></g></g></svg><span class="friend-name">Pochacco</span></button><button class="friend friend-right" type="button" data-friend="cin" aria-label="Saludar a Cinnamoroll" style="--slot:0;--phase:-2.55s"><svg class="friend-portrait" viewBox="-116 -145 232 300" aria-hidden="true"><g id="buddy-cin-drawing" stroke="#93b0c6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cy="130" rx="48" ry="7" fill="#a1b8c8" opacity=".16" stroke="none"/>
+<path class="buddy-tail" d="M30 89q37-22 43 3 4 20-19 18-18-3-9-14 5-6 12 0" fill="#fffefa"/>
+<path d="M-29 44q-25 24-15 60 14 19 44 13 30 6 44-13 10-36-15-60Z" fill="url(#buddy-white)"/>
+<ellipse cx="-26" cy="115" rx="23" ry="13" fill="#fffdfa"/><ellipse cx="26" cy="115" rx="23" ry="13" fill="#fffdfa"/>
+<path d="M-29 54q-25 4-29 24-2 13 12 14 12-5 22-20" fill="#fffefa"/>
+<g class="buddy-hand"><path d="M30 54q18 1 28-18 6-12 15-6 9 8-2 27-13 20-33 21" fill="#fffefa"/></g>
+<g class="buddy-head"><g class="buddy-ear"><path d="M-40-26q-42-33-67-18-15 13 5 32 23 20 62 10" fill="url(#buddy-white)"/><path d="M-93-30q19 1 35 11" fill="none" stroke="#f5dce2" stroke-width="4"/></g><g class="buddy-ear ear-right"><path d="M40-26q42-33 67-18 15 13-5 32-23 20-62 10" fill="url(#buddy-white)"/><path d="M93-30q-19 1-35 11" fill="none" stroke="#f5dce2" stroke-width="4"/></g>
+<path d="M-52-12q1-41 52-42 51 1 52 42 5 45-52 50-57-5-52-50Z" fill="url(#buddy-white)"/>
+<path d="M-32-30q12-12 30-13" fill="none" stroke="#fff" stroke-width="5"/><g class="buddy-eyes" stroke="none"><g class="buddy-pupils"><ellipse cx="-22" cy="0" rx="4.5" ry="7" fill="#77a6ca"/><ellipse cx="22" cy="0" rx="4.5" ry="7" fill="#77a6ca"/><circle cx="-21" cy="-2" r="1.4" fill="#fff"/><circle cx="23" cy="-2" r="1.4" fill="#fff"/></g></g> <g fill="#efa9bb" opacity=".65" stroke="none"><ellipse cx="-35" cy="15" rx="10" ry="5"/><ellipse cx="35" cy="15" rx="10" ry="5"/></g>
+<path d="M-9 12q5 11 9 0 4 11 9 0" fill="none" stroke="#759dc2" stroke-width="2.2"/></g></g></svg><span class="friend-name">Cinnamoroll</span></button><button class="friend friend-right" type="button" data-friend="pom" aria-label="Saludar a Pompompurin" style="--slot:1;--phase:-3.4s"><svg class="friend-portrait" viewBox="-116 -145 232 300" aria-hidden="true"><g id="buddy-pom-drawing" stroke="#ac824b" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cy="130" rx="48" ry="7" fill="#bca877" opacity=".16" stroke="none"/>
+<path d="M-43 18q-16 35-12 69 4 35 55 34 51 1 55-34 4-34-12-69Z" fill="url(#buddy-gold)"/>
+<ellipse cy="85" rx="30" ry="25" fill="#fff0b0" stroke="none" opacity=".7"/>
+<ellipse cx="-31" cy="116" rx="22" ry="13" fill="#f5d982"/><ellipse cx="31" cy="116" rx="22" ry="13" fill="#f5d982"/>
+<path d="M-43 48q-25 6-22 28 4 15 16 10l12-18" fill="#f5d982"/>
+<g class="buddy-hand"><path d="M40 45q14 5 19-12 5-13 13-7 15 9 4 29-12 22-31 18" fill="#f8df90"/><path d="m64 34 6 4" fill="none" stroke-width="1.5"/></g>
+<g class="buddy-head"><g class="buddy-ear"><path d="M-39-29q-38-12-36 19 1 32 29 32l11-20" fill="#edcc75"/></g><g class="buddy-ear ear-right"><path d="M39-29q38-12 36 19-1 32-29 32L35 2" fill="#edcc75"/></g>
+<path d="M-47-13q-2-44 47-45 49 1 47 45 5 46-47 49-52-3-47-49Z" fill="url(#buddy-gold)"/>
+<g class="buddy-hat"><path d="M-41-39q1-27 41-28 40 1 41 28-35 20-82 0Z" fill="#91684e" stroke="#79523e"/><path d="M-24-49q18-12 37-9" fill="none" stroke="#b38c6c" stroke-width="3"/><path d="M0-65q-2-11 5-12" fill="none" stroke="#79523e" stroke-width="5"/></g>
+<g class="buddy-eyes" stroke="none"><g class="buddy-pupils"><ellipse cx="-21" cy="1" rx="3.5" ry="5" fill="#73563c"/><ellipse cx="21" cy="1" rx="3.5" ry="5" fill="#73563c"/><circle cx="-20" cy="-1" r="1.4" fill="#fff"/><circle cx="22" cy="-1" r="1.4" fill="#fff"/></g></g><g fill="#e9ae81" opacity=".6" stroke="none"><ellipse cx="-30" cy="17" rx="9" ry="4"/><ellipse cx="30" cy="17" rx="9" ry="4"/></g><ellipse cy="11" rx="6" ry="4" fill="#785a3c" stroke="none"/><path d="M0 15v5m-9-1q9 12 18 0" fill="none" stroke="#785a3c" stroke-width="2"/></g></g></svg><span class="friend-name">Pompompurin</span></button><button class="friend friend-right" type="button" data-friend="ker" aria-label="Saludar a Keroppi" style="--slot:2;--phase:-4.25s"><svg class="friend-portrait" viewBox="-116 -145 232 300" aria-hidden="true"><g id="buddy-ker-drawing" stroke="#648345" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cy="130" rx="45" ry="7" fill="#9eac7e" opacity=".16" stroke="none"/>
+<path d="M-28 33q-26 27-17 62l19 10 26-5 26 5 19-10q9-35-17-62Z" fill="url(#buddy-green)"/>
+<path d="M-33 40q33 13 66 0l8 44q-41 12-82 0Z" fill="#fff9eb"/>
+<path d="M-25 44v40M-8 48v38M9 48v38M26 44v40" stroke="#df7a87" stroke-width="9"/>
+<path d="M-29 99q-21 4-23 21 14 14 39 1l10-19M29 99q21 4 23 21-14 14-39 1l-10-19" fill="#a9ce77"/>
+<path d="M-37 49q-26-2-25 21 1 14 14 10l17-13" fill="#b5d984"/>
+<g class="buddy-hand"><path d="M37 49q19 0 24-21 1-12 11-10 16 4 9 26-8 25-33 26" fill="#b5d984"/><path d="m69 27 6 2m-8 5 7 2" stroke-width="1.5"/></g>
+<g class="buddy-head"><ellipse cy="2" rx="54" ry="35" fill="url(#buddy-green)"/><circle cx="-25" cy="-26" r="29" fill="#fffdf5"/><circle cx="25" cy="-26" r="29" fill="#fffdf5"/>
+<g class="buddy-eyes" stroke="none"><g class="buddy-pupils"><ellipse cx="-18" cy="-25" rx="8" ry="11" fill="#40503a"/><ellipse cx="18" cy="-25" rx="8" ry="11" fill="#40503a"/><circle cx="-17" cy="-27" r="1.4" fill="#fff"/><circle cx="19" cy="-27" r="1.4" fill="#fff"/></g></g> <g fill="#efa9bb" opacity=".65" stroke="none"><ellipse cx="-36" cy="13" rx="10" ry="5"/><ellipse cx="36" cy="13" rx="10" ry="5"/></g><path d="m-11 15 11 9 11-9" fill="none" stroke="#546c3c" stroke-width="2.3"/>
+<path d="M-43-32q2-12 11-16M8-32q2-12 11-16" fill="none" stroke="#fff" stroke-width="3"/></g></g></svg><span class="friend-name">Keroppi</span></button></section>
+<section class="card" id="carta" aria-labelledby="card-title"><div class="letter-flower" aria-hidden="true"><svg viewBox="-60 -60 120 120"><use href="#rose" style="color:#e6a5b5" transform="scale(.75)"/></svg></div><p class="eyebrow">ESTO ES PARA TI</p><h2 id="card-title">Hay cosas que quería decirte.</h2><p class="card-intro">Y me pareció bonito empezar por aquí.</p><button id="open" class="primary" type="button" aria-expanded="false" aria-controls="letter">Leer mi carta</button><div id="letter" hidden><p id="letter-text"></p><p id="signature" class="signature"></p><div class="letter-divider" aria-hidden="true">✧</div><p id="phrase" class="phrase" aria-live="polite"></p><button id="another" class="text-button" type="button">Todavía hay algo más →</button></div></section>
+<footer><p>Si este detalle te sacó una sonrisa,<br><em>entonces ya valió la pena.</em></p><span class="footer-line" aria-hidden="true"></span></footer>
+</main><script>// Cambia estos textos, guarda y recarga la página. Conserva comillas y comas.
+window.DEDICATORIA = {
+  nombre: "Alguien especial",
+  de: "De alguien que te quiere",
+  carta: "Hice este pequeño rincón para recordarte algo: tu forma de ser hace más bonitos mis días. Gracias por las sonrisas, las conversaciones y esos detalles que se quedan conmigo. Ojalá esta sorpresa te regale una sonrisa tan linda como la tuya.",
+  frases: [
+    "De todas las casualidades, conocerte es una de mis favoritas.",
+    "Tu sonrisa tiene una forma muy bonita de mejorar mi día.",
+    "Me gustan los momentos sencillos que se vuelven especiales contigo.",
+    "Ojalá hoy te pasen cosas tan bonitas como las que tú haces sentir.",
+    "Esta pequeña sorpresa lleva algo grande: todo mi cariño por ti."
+  ]
+};
+
+'use strict';
+(function () {
+  const config = window.DEDICATORIA;
+  const $ = id => document.getElementById(id);
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = false;
+  let phraseIndex = 0;
+  let kissTimeout;
+  let statusTimeout;
+  const phrases = Array.isArray(config.frases) && config.frases.length ? config.frases : ['Qué bonito coincidir contigo.'];
+  $('recipient').textContent = config.nombre;
+  $('letter-text').textContent = config.carta;
+  $('signature').textContent = config.de;
+  document.title = `Un jardín para ${config.nombre}`;
+  $('open').addEventListener('click', () => {
+    $('letter').hidden = false;
+    $('open').hidden = true;
+    $('open').setAttribute('aria-expanded', 'true');
+    $('letter').setAttribute('tabindex', '-1');
+    $('letter').focus({preventScroll: true});
+    $('card-title').textContent = `Para ti, ${config.nombre}.`;
+    showPhrase();
+  });
+  function showPhrase() {
+    $('phrase').textContent = phrases[phraseIndex];
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+  }
+  $('another').addEventListener('click', showPhrase);
+  function updateMotionButton() {
+    const reduced = motionQuery.matches;
+    $('motion').textContent = reduced ? 'Movimiento reducido' : paused ? 'Dejar soplar el viento' : 'Pausar el viento';
+    $('motion').disabled = reduced;
+    $('motion').setAttribute('aria-pressed', String(paused || reduced));
+    $('motion').setAttribute('aria-label', reduced ? 'Movimiento reducido según tu dispositivo' : paused ? 'Reanudar las animaciones' : 'Pausar las animaciones');
+  }
+  $('motion').addEventListener('click', () => {
+    paused = !paused;
+    document.body.classList.toggle('paused', paused);
+    updateMotionButton();
+  });
+  motionQuery.addEventListener('change', () => {
+    if (motionQuery.matches) $('particles').replaceChildren();
+    updateMotionButton();
+  });
+  updateMotionButton();
+  // Los pétalos caen solos; la lluvia de corazones se activa con el botón.
+  // El corazón del beso se anima aparte dentro del SVG de la portada.
+  function makeParticle(heart = false, burst = false, initial = false) {
+    if (paused || motionQuery.matches || document.hidden || $('particles').childElementCount >= 85) return;
+    const node = document.createElement('span');
+    const kind = Math.floor(Math.random() * 3);
+    node.className = heart ? 'falling floating-heart' : `falling petal ${kind === 1 ? 'lily-petal' : kind === 2 ? 'sun-petal' : ''}`;
+    if (heart) node.textContent = '♥';
+    const duration = burst ? 6 + Math.random() * 6 : 12 + Math.random() * 9;
+    const drift = Math.round(-70 + Math.random() * 140);
+    node.style.setProperty('--x', `${Math.random() * 100}%`);
+    node.style.setProperty('--duration', `${duration}s`);
+    node.style.setProperty('--delay', initial ? `${-Math.random() * duration}s` : burst ? `${Math.random() * 2}s` : '0s');
+    node.style.setProperty('--size', `${heart ? 16 + Math.random() * 11 : 9 + Math.random() * 8}px`);
+    node.style.setProperty('--drift', `${drift}px`);
+    node.style.setProperty('--drift-mid', `${-drift * .6}px`);
+    node.style.setProperty('--spin', `${180 + Math.random() * 360}deg`);
+    node.style.setProperty('--color', ['#db8d9e','#c8acd5','#e9b357'][kind]);
+    node.addEventListener('animationend', () => node.remove(), { once: true });
+    $('particles').append(node);
+  }
+  for (let i = 0; i < 14; i++) makeParticle(false, false, true);
+  setInterval(() => makeParticle(), 1100);
+  $('love-button').addEventListener('click', () => {
+    // Cuatro pétalos por cada corazón: las flores llevan el protagonismo.
+    for (let i = 0; i < 28; i++) makeParticle(false, true);
+    for (let i = 0; i < 7; i++) makeParticle(true, true);
+    const cover = document.querySelector('.cover');
+    clearTimeout(kissTimeout);
+    if (!paused && !motionQuery.matches) {
+      cover.classList.remove('kiss-again');
+      void cover.offsetWidth;
+      cover.classList.add('kiss-again');
+      kissTimeout = setTimeout(() => cover.classList.remove('kiss-again'), 1550);
+    }
+    $('love-status').textContent = 'Y un beso más, porque uno se queda corto.';
+    clearTimeout(statusTimeout);
+    statusTimeout = setTimeout(() => { $('love-status').textContent = ''; }, 6500);
+  });
+
+  // Cada amigo tiene gestos propios. La mirada responde suavemente al cursor.
+  document.querySelectorAll('.friend').forEach(friend => {
+    let greetingTimeout;
+    friend.addEventListener('pointermove', event => {
+      if (paused || motionQuery.matches) return;
+      const bounds = friend.getBoundingClientRect();
+      friend.style.setProperty('--look-x', `${Math.max(-2, Math.min(2, (event.clientX - bounds.left - bounds.width / 2) / 25))}px`);
+      friend.style.setProperty('--look-y', `${Math.max(-1.5, Math.min(1.5, (event.clientY - bounds.top - bounds.height / 2) / 45))}px`);
+    });
+    friend.addEventListener('pointerleave', () => {
+      friend.style.setProperty('--look-x', '0px');
+      friend.style.setProperty('--look-y', '0px');
+    });
+    friend.addEventListener('click', () => {
+      if (paused || motionQuery.matches) return;
+      clearTimeout(greetingTimeout);
+      friend.classList.remove('is-greeting');
+      void friend.offsetWidth;
+      friend.classList.add('is-greeting');
+      greetingTimeout = setTimeout(() => friend.classList.remove('is-greeting'), 1450);
+    });
+  });
+})();
+</script></body></html>
